@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TextView" customModule="CustomTextView" customModuleProvider="target">
+            <connections>
+                <outlet property="placeholderLabel" destination="CsC-68-WTI" id="EKb-Ws-PP9"/>
+                <outlet property="textView" destination="ApW-js-CCQ" id="kyV-iI-rya"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="ONS-OD-nAh">
+            <rect key="frame" x="0.0" y="0.0" width="388" height="278"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <textView clipsSubviews="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ApW-js-CCQ">
+                    <rect key="frame" x="0.0" y="0.0" width="388" height="278"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <gestureRecognizers/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="ttU-XR-vF7" appends="YES" id="vua-Jr-jnF"/>
+                    </connections>
+                </textView>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CsC-68-WTI">
+                    <rect key="frame" x="173" y="128" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="ApW-js-CCQ" firstAttribute="leading" secondItem="ONS-OD-nAh" secondAttribute="leading" id="3zS-zd-U7m"/>
+                <constraint firstAttribute="centerY" secondItem="CsC-68-WTI" secondAttribute="centerY" constant="0.5" id="M2H-nG-zXP"/>
+                <constraint firstAttribute="trailing" secondItem="ApW-js-CCQ" secondAttribute="trailing" id="Yxe-Dz-yom"/>
+                <constraint firstItem="ApW-js-CCQ" firstAttribute="top" secondItem="ONS-OD-nAh" secondAttribute="top" id="rzZ-sl-HE1"/>
+                <constraint firstAttribute="centerX" secondItem="CsC-68-WTI" secondAttribute="centerX" id="uZy-IW-El4"/>
+                <constraint firstAttribute="bottom" secondItem="ApW-js-CCQ" secondAttribute="bottom" id="ywi-6s-Pjd"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="221" y="338"/>
+        </view>
+        <tapGestureRecognizer id="ttU-XR-vF7">
+            <connections>
+                <action selector="textViewDidTap:" destination="-1" id="bDf-FX-dfN"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+</document>
